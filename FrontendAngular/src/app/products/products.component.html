@@ -1,0 +1,35 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Details</th>
+      <th scope="col">Image</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+      <th scope="col">
+        <button type="button" class="btn btn-primary" (click)="show()">
+          Add Product
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of prods">
+      <th scope="row">{{ product.id }}</th>
+      <td>{{ product.name }}</td>
+      <td>{{ product.details }}</td>
+      <td>{{ product.image }}</td>
+      <td>{{ product.price }}</td>
+      <td>
+        <button type="button" class="btn btn-success" routerLink='/update/{{product.id}}' style="margin-right: 1%;">
+          Edit
+        </button>
+        <button type="button" class="btn btn-danger" (click)="delete(product)">
+          delete
+        </button>
+      </td>
+
+    </tr>
+  </tbody>
+</table>

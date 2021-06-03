@@ -1,0 +1,5 @@
+{
+    "require": {
+        "nordsoftware/lumen-cors": "^3.4"
+    }
+}
